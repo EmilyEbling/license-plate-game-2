@@ -46,7 +46,8 @@ input[type='checkbox'] {
     margin: 20px;
     border-radius: 50px;
     background-color: #f1f3f5;
-    outline: 2px solid black;
+    border: 2px solid black;
+    outline: none;
     color: black;
 }
 
