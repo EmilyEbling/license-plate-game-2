@@ -114,7 +114,6 @@ function createStatesList(states) {
         }
 
         var br = document.createElement('br');
-        var br2 = document.createElement('br');
         var div = document.createElement('div');
         div.id = state.name;
         div.className = "stateContainer";
@@ -123,13 +122,12 @@ function createStatesList(states) {
 
         var container = document.getElementById('states');
         div.appendChild(label);
-        div.appendChild(br2);
+        div.appendChild(br);
         div.appendChild(carCheckBox);
         div.appendChild(carCheckBoxLabel);
         div.appendChild(truckCheckBox);
         div.appendChild(truckCheckBoxLabel);
         container.append(div);
-        container.appendChild(br);
 
         if (state.carCheck) {
             document.getElementById(state.name + "Car").checked = true;

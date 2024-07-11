@@ -79,4 +79,5 @@ input[type="search"]:focus {
     padding: 15px 32px;
     border-radius: 50px;
     text-align: center;
+    margin-bottom: 30px;
 }
