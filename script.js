@@ -140,6 +140,18 @@ function createStatesList(states) {
     });
 }
 
+function filterStates(event) {
+    const searchTerm = event.target.value.trim().toLowerCase();
+    const listItems = document.querySelectorAll("#states div");
+
+    listItems.forEach(function(item) {
+        item.style.display = 'revert';
+        if (!item.innerText.toLowerCase().includes(searchTerm)) {
+            item.style.display = 'none';
+        }
+    })
+}
+
 function clearStorage() {
     if (confirm('Are you sure you want to start a new trip? All state data will be cleared.')) {
         localStorage.clear();
