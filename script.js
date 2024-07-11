@@ -115,14 +115,20 @@ function createStatesList(states) {
 
         var br = document.createElement('br');
         var br2 = document.createElement('br');
+        var div = document.createElement('div');
+        div.id = state.name;
+        div.className = "stateContainer";
+        div.style.backgroundImage = "linear-gradient(rgba(226, 228, 230, 0.8), rgba(226, 228, 230, 0.8)), url('States/" + state.name + ".JPG')";
+        div.style.backgroundSize = "100% 100%";
 
         var container = document.getElementById('states');
-        container.appendChild(label);
-        container.appendChild(br2);
-        container.appendChild(carCheckBox);
-        container.appendChild(carCheckBoxLabel);
-        container.appendChild(truckCheckBox);
-        container.appendChild(truckCheckBoxLabel);
+        div.appendChild(label);
+        div.appendChild(br2);
+        div.appendChild(carCheckBox);
+        div.appendChild(carCheckBoxLabel);
+        div.appendChild(truckCheckBox);
+        div.appendChild(truckCheckBoxLabel);
+        container.append(div);
         container.appendChild(br);
 
         if (state.carCheck) {
